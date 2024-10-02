@@ -38,6 +38,11 @@ public class Persona {
         + "\nCorreo: " + this.getCorreo());
     }
     
+    public void modificarPersona(){
+        nombreape=JOptionPane.showInputDialog("Ingrese nombre y apellido:");
+        ciudad=JOptionPane.showInputDialog("Ingrese su ciudad:");
+        correo=JOptionPane.showInputDialog("Ingrese su correo");
+    }
 
     public int getLegajo() {
         return legajo;
