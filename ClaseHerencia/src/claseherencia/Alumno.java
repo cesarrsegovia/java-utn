@@ -8,6 +8,15 @@ public class Alumno extends Persona{
     private String titulosec;
     private String curso;
     
+    public void mostrar(){
+        JOptionPane.showMessageDialog(null, 
+                "\nLegajo: " + this.getLegajo()
+                + "\nNombre y apellido: " + this.getNombreape()
+                + "\nCiudad: " + this.getCiudad()
+                + "\nCorreo: " + this.getCorreo()
+                +"\nTitulo secundario: " + this.getTitulosec() + "\nCurso: " + this.getCurso());
+    }
+    
     Alumno(){
         super();
         titulosec="";

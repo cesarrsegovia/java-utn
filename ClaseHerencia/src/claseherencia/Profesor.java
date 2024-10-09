@@ -8,6 +8,16 @@ public class Profesor extends Persona{
     private int horascat;
     private String especialidad;
     
+    public void mostrar(){
+        JOptionPane.showMessageDialog(null, 
+                "\nLegajo: " + this.getLegajo()
+                + "\nNombre y apellido: " + this.getNombreape()
+                + "\nCiudad: " + this.getCiudad()
+                + "\nCorreo: " + this.getCorreo()
+                + "\nCantidad horas catedras: " + this.getHorascat()
+                + "\nEspecialidad: " + this.getEspecialidad());
+    }
+    
     Profesor(){
         super();
        horascat=0;

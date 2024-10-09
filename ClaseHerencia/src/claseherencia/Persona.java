@@ -4,19 +4,14 @@ package claseherencia;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
-public class Persona {
+public abstract class Persona {
     private int legajo;
     private String nombreape;
     private String ciudad;
     //Date fnac;
     private String correo;
 
-    /*public Persona(int legajo, String nombreape, String ciudad, String correo) {
-        this.legajo = legajo;
-        this.nombreape = nombreape;
-        this.ciudad = ciudad;
-        this.correo = correo;
-    }*/
+    public abstract void mostrar();
     
     Persona(){
         legajo=0;
