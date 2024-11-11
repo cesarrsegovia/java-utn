@@ -2,7 +2,7 @@
 package com.mycompany.guia4.ejer1;
 
 
-public class Electronico extends Producto {
+public class Electronico extends Producto{
     private String garantia; //falso no
     private String origen; //falso importado
 
@@ -51,12 +51,4 @@ public class Electronico extends Producto {
     public void setOrigen(String origen) {
         this.origen = origen;
     }
-    
-    
-    
-    
-
-   
-    
-    
 }

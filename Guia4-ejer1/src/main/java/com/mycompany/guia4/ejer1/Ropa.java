@@ -7,13 +7,14 @@ import javax.swing.JOptionPane;
 public class Ropa extends Producto{
     private String tamanio;
 
-    public Ropa(int id, String nombre, String marca, float precio_base) {
+    public Ropa(int id, String nombre, String marca, float precio_base,String tamanio) {
         super(id, nombre, marca, precio_base);
+        this.tamanio=tamanio;
     }
-
+    
     public Ropa() {
         super();
-        this.tamanio = tamanio;
+        this.tamanio = "";
     }
     
     public void registrarRopa(int i){
@@ -42,6 +43,4 @@ public class Ropa extends Producto{
     public void setTamanio(String tamanio) {
         this.tamanio = tamanio;
     }
-    
-    
 }

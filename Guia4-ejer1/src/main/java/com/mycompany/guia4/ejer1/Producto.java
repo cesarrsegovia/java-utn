@@ -9,7 +9,7 @@ abstract public class Producto {
     private String nombre;
     private String marca;
     private float precio_base;
-
+    
     public Producto(int id, String nombre, String marca, float precio_base) {
         this.id = id;
         this.nombre = nombre;
@@ -73,6 +73,4 @@ abstract public class Producto {
     public void setPrecio_base(float precio_base) {
         this.precio_base = precio_base;
     }
-    
-    
 }

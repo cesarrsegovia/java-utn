@@ -10,9 +10,9 @@ public class Catalogo {
     public Producto getVecprod(int pos) {
         return vecprod[pos];
     }
-
-    public void setVecprod(Producto[] vecprod) {
-        this.vecprod = vecprod;
+    
+    public void setVecprod(Producto v, int pos) {
+        this.vecprod[pos]=v;
     }
     
     public Catalogo(){
@@ -29,9 +29,13 @@ public class Catalogo {
                     break;
                 case "electronico":
                     vecprod[i]=new Electronico();
+                    ((Electronico)vecprod[i]).registrarProducto(i);
+                    JOptionPane.showMessageDialog(null, ((Electronico)vecprod[i]).mostrarElectro());
                     break;
                 case "alimento":
                     vecprod[i]=new Alimento();
+                    ((Alimento)vecprod[i]).registrarAlimento(i);
+                    JOptionPane.showMessageDialog(null, ((Alimento)vecprod[i]).mostrarAlimento());
                     break;
             }
         }
@@ -53,7 +57,7 @@ public class Catalogo {
         }
     }
     
-    public String listadoProductos(int p){
+     public String listadoProductos(int p){
         String a="";
         this.ordenarProductos();
         for(int i=0;i<largeVec();i++){
@@ -68,12 +72,12 @@ public class Catalogo {
         
         return a;
     }
-    
-    public String ordenarOrigen(String ori){
+     
+     public String ordenarOrigen(String ori){
         String a="";
         for(int i=0;i<largeVec();i++){
             if(vecprod[i] instanceof Electronico){
-                if(((Electronico) vecprod[i]).isOri().equalsIgnoreCase(ori)) a+=((Electronico) vecprod[i]).mostrarProducto();
+                if(((Electronico) vecprod[i]).getOrigen().equalsIgnoreCase(ori)) a+=((Electronico) vecprod[i]).mostrarProducto();
             }
         }
         
@@ -83,7 +87,16 @@ public class Catalogo {
     public int busqueda(int p, int id){
         int ban=-1;
         for(int i=0;i<largeVec();i++){
-            
+            if(vecprod[i].getId()==id){
+                if(p==1 && vecprod[i] instanceof Ropa){
+                    ban=i;
+                }else if(p==2 && vecprod[i] instanceof Electronico){
+                    ban=i;
+                }else if(p==3 && vecprod[i] instanceof Alimento){
+                    ban=i;
+                }
+            }
         }
-    }
+        return ban;
+    } 
 }

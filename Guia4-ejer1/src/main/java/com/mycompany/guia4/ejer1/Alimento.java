@@ -6,13 +6,14 @@ import javax.swing.JOptionPane;
 
 public class Alimento extends Producto{
     private String perecedero;
-
+    
     public Alimento(String perecedero, int id, String nombre, String marca, float precio_base) {
         super(id, nombre, marca, precio_base);
         this.perecedero = perecedero;
     }
 
     public Alimento() {
+        super();
         this.perecedero = "";
     }
     
@@ -41,5 +42,4 @@ public class Alimento extends Producto{
     public void setPerecedero(String perecedero) {
         this.perecedero = perecedero;
     }
-    
 }
